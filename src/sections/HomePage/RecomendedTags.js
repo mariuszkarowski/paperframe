@@ -65,27 +65,16 @@ class RecomendedTags extends Component {
   };
   render() {
     const recommendedTags = {
-      "Tech & Science": [
-        "Science",
-        "Technology",
-        "steemSTEM",
-        "Astronomy",
-        "Space",
-        "History",
-        "Philosophy",
-        "JavaScript",
-        "Artificial Intelligence"
+      "Społeczeństwo i Polityka": [
+        "reakcja",
+        "pl-polityka",
+        "pl-historia"
       ],
-      Life: [
-        "Travel",
-        "Motivation",
-        "Life",
-        "Food",
-        "Health",
-        "Parenting",
-        "Funny",
-        "Meme",
-        "Nature"
+      Blogi: [
+        "pl-blog",
+        "pl-emocjonalnie",
+        "pl-kobieta",
+
       ],
       "Arts & Entertainment": [
         "Art",
