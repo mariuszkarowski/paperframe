@@ -43,14 +43,15 @@ const Wrapper = styled.div`
     opacity: 1;
   }
 `;
-const LeftCard = styled.div`
-  margin-right: 20px;
+const RightCard = styled.div`
+  margin-right: 10px;
+
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
-const RightCard = styled.div`
+const LeftCard = styled.div`
   width: 160px;
   display: flex;
   flex: 0 0 auto;
@@ -78,8 +79,9 @@ const SubTitle = styled.div`
   line-height: 1.7;
 `;
 const Img = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 120px;
+  height: 120px;
+  border-radius:50%;
   object-fit: cover;
   background: #f6f6f6;
 `;
@@ -225,7 +227,23 @@ class Card extends Component {
     return (
       <Wrapper>
         <LeftCard>
-          {userFeed && userFeed !== data.author ? (
+            <Link to={`/@${data.author}/${data.permlink}`}>
+              <Img
+                src={
+                  "https://steemitimages.com/160x200/" +
+                  this.getCover(data.json_metadata)
+                }
+                onLoad={e => e.target.classList.add("loaded")}
+              />
+            </Link>
+
+
+
+          
+        </LeftCard>
+        {this.getCover(data.json_metadata) ? (
+          <RightCard>
+{userFeed && userFeed !== data.author ? (
             <Repost>
               Reposted by <Link to={`/@${userFeed}`}>{userFeed}</Link>
             </Repost>
@@ -296,18 +314,6 @@ class Card extends Component {
               )}
             </ActionWrapper>
           </User>
-        </LeftCard>
-        {this.getCover(data.json_metadata) ? (
-          <RightCard>
-            <Link to={`/@${data.author}/${data.permlink}`}>
-              <Img
-                src={
-                  "https://steemitimages.com/160x200/" +
-                  this.getCover(data.json_metadata)
-                }
-                onLoad={e => e.target.classList.add("loaded")}
-              />
-            </Link>
           </RightCard>
         ) : (
           <RightCard />
@@ -318,3 +324,4 @@ class Card extends Component {
 }
 
 export default view(Card);
+
