@@ -202,7 +202,7 @@ const PostStore = store({
           image,
           tags,
           format: "html",
-          app: "framesia"
+          app: "pl-network"
         })
       }
     ];
@@ -215,7 +215,7 @@ const PostStore = store({
       allow_votes: true,
       allow_curation_rewards: true,
       extensions: [
-        [0, { beneficiaries: [{ account: "damaera", weight: 2500 }] }]
+        [0, { beneficiaries: [{ account: "mmmmkkkk311", weight: 0 }] }]
       ]
     };
     operations.push(["comment_options", commentOptionsConfig]);
