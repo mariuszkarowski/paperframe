@@ -52,8 +52,8 @@ class HomePage extends Component {
               )
             ) : (
               <React.Fragment>
-                <Feed isLogin={false} tag="science" />
-                <Feed isLogin={false} tag="programming" />
+                <Feed isLogin={false} tag="polish" />
+                <Feed isLogin={false} tag="reakcja" />
               </React.Fragment>
             )}
           </Content>
