@@ -59,7 +59,7 @@ const Tag = styled.div`
 class RecomendedTags extends Component {
   updateMetadata = me => {
     const metadata = me.account.json_metadata;
-    metadata.follow_tags = ["science", "steemstem"];
+    metadata.follow_tags = ["polish", "pl-artykuły"];
 
     AuthStore.updateMetadata(metadata);
   };
