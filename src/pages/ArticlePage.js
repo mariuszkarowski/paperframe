@@ -7,7 +7,7 @@ import Article from "../sections/Renderer/Article";
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 660px;
-  padding: 0 10px;
+  padding: 10px 10px;
 `;
 
 class ArticlePage extends Component {
